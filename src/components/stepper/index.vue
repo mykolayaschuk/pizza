@@ -94,7 +94,7 @@ export default {
     // Executed when @stepper-finished event is triggered
     completeForm() {
       this.$store.commit("ADD_ORDER");
-      // this.$store.commit("INIT_FORM");
+      this.$store.commit("INIT_FORM");
 
       this.$router.push({ name: "orders" });
     }

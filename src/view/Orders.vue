@@ -1,5 +1,8 @@
 <template>
-  <b-container>
+  <b-container class="text-right">
+    <router-link to="/">
+      <b-button variant="primary" class="mb-3">New order</b-button>
+    </router-link>
     <b-table striped hover :items="orders" bordered outlined></b-table>
   </b-container>
 </template>
@@ -12,17 +15,6 @@ export default {
 
   computed: {
     ...mapGetters(["orders"])
-  },
-
-  data() {
-    return {
-      items: [
-        { age: 40, first_name: "Dickerson", last_name: "Macdonald" },
-        { age: 21, first_name: "Larsen", last_name: "Shaw" },
-        { age: 89, first_name: "Geneva", last_name: "Wilson" },
-        { age: 38, first_name: "Jami", last_name: "Carney" }
-      ]
-    };
   }
 };
 </script>
